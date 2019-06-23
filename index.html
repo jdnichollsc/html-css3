@@ -4,12 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Bootstrap Demo</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+    * {
+      //color: white;
+      font-family: 'Mali';
+    }
+
+    .container-fluid {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .content {
+      padding-bottom: 12rem;
+    }
+
+    // https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 12rem;
+      overflow: hidden;
+    }
+
+    html {
+      // 1em === 16px (by default)
+      font-size: 100%;
+    }
+
+    header {
+      background-color: #962BB4;
+    }
+
+    .title {
+      font-size: 5rem;
+    }
+
+    .title--subtitle {
+      font-size: 2rem;
+    }
+
+    .card--thing {
+      height: 8em;
+      width: 100%;
+    }
+
+    .footer--cards {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hola Mundo!</h1>
+  <div class="container-fluid p-0">
+    <header>
+      <div class="row d-none d-sm-flex">
+        <!-- https://getbootstrap.com/docs/4.0/layout/grid/#how-it-works -->
+        <div class="col d-flex justify-content-end align-self-center">
+          <div>
+            <!-- BEM -->
+            <h1 class="title text-white">Hello!</h1>
+            <!-- https://getbootstrap.com/docs/4.0/utilities/vertical-align/ -->
+            <!-- https://getbootstrap.com/docs/4.0/utilities/text/ -->
+            <!-- https://octicons.github.com/icon/thumbsup/ -->
+            <p class="title--subtitle text-white">I am Nicholls
+              <i class="align-middle octicon octicon-thumbsup font-weight-bold"></i></p>
+          </div>
+        </div>
+        <!-- https://getbootstrap.com/docs/4.3/utilities/display/#hiding-elements -->
+        <div class="col">
+          <!-- https://getbootstrap.com/docs/4.3/utilities/spacing/#notation -->
+          <!-- https://getbootstrap.com/docs/4.0/utilities/sizing/ -->
+          <!-- https://getbootstrap.com/docs/4.0/utilities/colors/#background-color -->
+          <!-- https://getbootstrap.com/docs/4.0/components/card/#about -->
+          <img class="rounded w-50 bg-info m-5 p-1 mh-50" src="https://avatars2.githubusercontent.com/u/2154886?s=460&v=4" alt="Logo">
+        </div>
+      </div>
+      <div class="d-block d-sm-none p-2 text-center">
+        <!-- BEM -->
+        <h1 class="title text-white">Hello!</h1>
+        <!-- https://getbootstrap.com/docs/4.0/utilities/vertical-align/ -->
+        <!-- https://getbootstrap.com/docs/4.0/utilities/text/ -->
+        <!-- https://octicons.github.com/icon/thumbsup/ -->
+        <p class="title--subtitle text-white">I am Nicholls <i class="align-middle octicon octicon-thumbsup font-weight-bold"></i></p>
+        <!-- https://getbootstrap.com/docs/4.0/utilities/borders/#border-radius -->
+        <!-- https://getbootstrap.com/docs/4.3/content/images/#aligning-images -->
+        <img class="rounded-circle mx-auto d-block w-50 h-50 pb-4" src="https://avatars2.githubusercontent.com/u/2154886?s=460&v=4" alt="Logo">
+      </div>
+    </header>
+    <section class="content pt-5 mx-5">
+      <!-- https://getbootstrap.com/docs/4.3/utilities/text/#text-alignment -->
+      <h2 class="text-center">I like so many things</h2>
+      <div class="row p-0 p-sm-4 p-md-5">
+        <div class="col-12 pt-2 col-sm-4">
+          <div class="card card--thing bg-dark text-center">
+            <div class="card-body">
+              <h4 class="text-white">HTML</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 pt-2 col-sm-4">
+          <div class="card card--thing bg-dark text-center">
+            <div class="card-body">
+              <h4 class="text-white">CSS</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 pt-2 col-sm-4">
+          <div class="card card--thing bg-dark text-center">
+            <div class="card-body">
+              <h4 class="text-white">JS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-center pt-3">My family</h2>
+      <section class="my-5">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sorelly Cardona
+            <span class="badge badge-primary badge-pill">Mamá</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Julian Nicholls
+            <span class="badge badge-primary badge-pill">Hermano</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Valentina Morato
+            <span class="badge badge-primary badge-pill">Novia</span>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <!-- https://getbootstrap.com/docs/4.3/components/card/#card-decks -->
+    <!-- https://getbootstrap.com/docs/4.3/components/card/#mixins-utilities -->
+    <!-- https://getbootstrap.com/docs/4.3/utilities/borders/#subtractive -->
+    <footer class="bg-warning m-0">
+      <div class="footer--cards card-deck">
+        <div class="card border-0 m-0 mh-50 text-justify bg-transparent">
+          <div class="card-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+          </div>
+        <div class="card border-0 m-0 mh-50 text-justify bg-transparent">
+          <div class="card-body">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
